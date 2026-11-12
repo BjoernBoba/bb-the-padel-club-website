@@ -1,4 +1,4 @@
-import { PortableText as SanityPortableText } from "@portabletext/react";
+import { PortableText as SanityPortableText, PortableTextBlock } from "@portabletext/react";
 import Image from "next/image";
 
 const components = {
@@ -71,6 +71,6 @@ const components = {
   },
 };
 
-export default function PortableTextRenderer({ value }: { value: unknown[] }) {
+export default function PortableTextRenderer({ value }: { value: PortableTextBlock[] }) {
   return <SanityPortableText value={value} components={components} />;
 }

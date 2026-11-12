@@ -1,3 +1,4 @@
+import { PortableTextBlock } from "@portabletext/react";
 import { Suspense } from "react";
 import { client } from "@/sanity/lib/client";
 import { newsBySlugQuery } from "@/lib/queries";
@@ -14,7 +15,7 @@ type NewsArticle = {
   category: string;
   excerpt?: string;
   image?: { asset: { url: string } };
-  body?: unknown[];
+  body?: PortableTextBlock[];
 };
 
 async function ArticleContent({ slug }: { slug: string }) {
