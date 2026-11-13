@@ -1,16 +1,16 @@
-import Image from "next/image";
-
 export default function CommunitySection() {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-32 px-6">
-      <Image
-        src="/images/better-players.webp"
-        alt="Better Players. Better People. Better Everyday."
-        fill
-        className="object-cover object-center"
-        quality={85}
-      />
-      <div className="absolute inset-0" style={{ background: "rgba(13,13,13,0.65)" }} />
+    <section
+      className="relative flex items-center justify-center overflow-hidden px-6"
+      style={{ background: "var(--black)", paddingTop: "6rem", paddingBottom: "9rem" }}
+    >
+      {/* Logo als Wasserzeichen im Hintergrund */}
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{ opacity: 0.07 }}
+      >
+        <img src="/images/logo.png" alt="" width={320} height={320} className="object-contain" />
+      </div>
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
         <h2
