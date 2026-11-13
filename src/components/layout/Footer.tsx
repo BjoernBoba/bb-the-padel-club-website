@@ -120,9 +120,13 @@ export default function Footer() {
             >
               Kontakt
             </h4>
+            <p className="text-sm mb-1" style={{ color: "var(--gold-dark)" }}>Mail</p>
+            <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>
+              info@bbthepadelclub.de
+            </p>
+            <p className="text-sm mb-1" style={{ color: "var(--gold-dark)" }}>Telefon</p>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              info@bbthepadelclub.de<br />
-              0156 3016 9060<br />
+              0156 3016 9060
             </p>
           </div>
         </div>
