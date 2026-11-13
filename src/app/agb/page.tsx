@@ -7,123 +7,88 @@ export default function AgbPage() {
     <div style={{ background: "var(--black)", color: "var(--text)", minHeight: "100vh" }}>
       <div className="max-w-3xl mx-auto px-4 py-24">
         <h1
-          className="text-4xl md:text-5xl font-bold mb-4"
+          className="text-4xl md:text-5xl font-bold mb-2"
           style={{ fontFamily: "var(--font-playfair)" }}
         >
-          Allgemeine Geschäftsbedingungen
+          Allgemeine Geschäftsbedingungen (AGB)
         </h1>
+        <p className="text-lg mb-2" style={{ color: "var(--text-muted)" }}>The Padel Club</p>
         <div className="w-16 h-px mb-4" style={{ background: "var(--gold)" }} />
         <p className="text-sm mb-12" style={{ color: "var(--text-muted)" }}>
-          Stand: November 2024
+          Stand: August 2026
         </p>
 
         <div className="space-y-10 text-base leading-relaxed" style={{ color: "var(--text-muted)" }}>
           <section>
             <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 1 Geltungsbereich
+              1. Geltungsbereich
             </h2>
+            <p className="mb-3">
+              Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für sämtliche Buchungen, den
+              Zutritt sowie die Nutzung der Sportanlage „The Padel Club" durch Kunden und Besucher.
+            </p>
             <p>
-              Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen BB The Padel Club
-              (nachfolgend Betreiber) und seinen Kunden (nachfolgend Mitglied oder Gast) über die Nutzung
-              der Padel-Anlagen, die Buchung von Courts sowie sonstige Leistungen des Betreibers.
+              Mit Abschluss einer Buchung bestätigt der Kunde, diese AGB gelesen und akzeptiert zu haben.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 2 Leistungsangebot
+              2. Buchung und Zutritt
             </h2>
+            <ul className="space-y-2 list-none">
+              {[
+                "Die Buchung erfolgt ausschließlich über das jeweilige Buchungssystem.",
+                "Der Zutritt erfolgt über einen digitalen QR-Code oder ein anderes vom Betreiber bereitgestelltes Zugangssystem.",
+                "Der Zutritt ist ausschließlich für den gebuchten Zeitraum gestattet.",
+                "Eine Weitergabe des Zutrittscodes an Dritte ist unzulässig.",
+              ].map((item, i) => (
+                <li key={i} className="flex gap-3">
+                  <span style={{ color: "var(--gold)" }}>–</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
+              3. Nutzung der Anlage
+            </h2>
+            <p className="mb-3">
+              Die Anlage darf ausschließlich zum Padelspielen und den hierfür vorgesehenen Zwecken genutzt werden.
+            </p>
             <p>
-              Der Betreiber stellt Padel-Courts zur stunden- oder halbstundenweisen Nutzung zur Verfügung.
-              Das Angebot umfasst außerdem Verleih von Schlägern und Bällen, Nutzung von Umkleidekabinen
-              sowie den Aufenthalt in der Lounge.
+              Untersagt sind insbesondere mutwillige Beschädigungen, Betreten nicht freigegebener Bereiche,
+              Rauchen innerhalb der Halle, offenes Feuer, gefährliche Gegenstände sowie Glasflaschen auf den Spielflächen.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 3 Buchung und Vertragsschluss
+              4. Gesundheit und Eigenverantwortung
             </h2>
             <p>
-              Buchungen können online über das Buchungssystem, telefonisch oder persönlich vorgenommen werden.
-              Ein Vertrag kommt mit Bestätigung der Buchung zustande. Der Betreiber behält sich das Recht vor,
-              Buchungen ohne Angabe von Gründen abzulehnen.
+              Jeder Nutzer bestätigt, gesundheitlich zur Ausübung des Sports in der Lage zu sein. Das
+              Betreten und die Nutzung der Anlage erfolgen auf eigene Gefahr. Es wird empfohlen, geeignete
+              Sportkleidung sowie ausschließlich saubere Hallenschuhe mit nicht färbender Sohle zu tragen.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 4 Preise und Zahlung
+              5. Haftung
             </h2>
-            <p>
-              Es gelten die zum Zeitpunkt der Buchung ausgewiesenen Preise. Die Zahlung erfolgt im Voraus
-              oder direkt vor Ort. Akzeptierte Zahlungsmittel: EC-Karte, Kreditkarte, Barzahlung.
-              Rechnungen sind sofort fällig.
+            <p className="mb-3">
+              Der Betreiber haftet nach den gesetzlichen Vorschriften.
             </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 5 Stornierung und Umbuchung
-            </h2>
-            <p>
-              Stornierungen sind bis 24 Stunden vor dem gebuchten Termin kostenfrei möglich. Bei späterer
-              Stornierung oder Nichterscheinen wird der volle Buchungsbetrag fällig. Umbuchungen sind bis
-              12 Stunden vor dem Termin einmalig kostenlos möglich.
+            <p className="mb-3">
+              Eine Haftung besteht insbesondere bei Vorsatz, grober Fahrlässigkeit sowie bei
+              Verletzung von Leben, Körper oder Gesundheit.
             </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 6 Hausordnung und Nutzungsbedingungen
-            </h2>
             <p>
-              Die Nutzung der Anlage erfolgt auf eigene Gefahr. Geeignetes Sportschuhwerk ist Pflicht.
-              Speisen und Getränke von außen sind in den Spielbereichen nicht gestattet. Der Betreiber
-              behält sich das Recht vor, Personen die gegen die Hausordnung verstoßen des Geländes zu verweisen.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 7 Haftung
-            </h2>
-            <p>
-              Der Betreiber haftet nicht für Personen- oder Sachschäden, die durch unsachgemäße Nutzung
-              der Anlage oder durch Verschulden des Nutzers entstehen. Eine Haftung für abhanden gekommene
-              oder beschädigte persönliche Gegenstände wird ausgeschlossen.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 8 Datenschutz
-            </h2>
-            <p>
-              Die erhobenen personenbezogenen Daten werden ausschließlich zur Vertragsabwicklung genutzt
-              und nicht an Dritte weitergegeben. Näheres regelt unsere Datenschutzerklärung.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 9 Änderungen der AGB
-            </h2>
-            <p>
-              Der Betreiber behält sich das Recht vor, diese AGB jederzeit zu ändern. Die jeweils aktuelle
-              Version ist auf der Website einsehbar. Wesentliche Änderungen werden Mitgliedern per E-Mail
-              mitgeteilt.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>
-              § 10 Schlussbestimmungen
-            </h2>
-            <p>
-              Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist Musterstadt. Sollten
-              einzelne Bestimmungen dieser AGB unwirksam sein oder werden, berührt dies nicht die
-              Wirksamkeit der übrigen Bestimmungen.
+              Soweit gesetzlich zulässig, ist die Haftung für leicht fahrlässig verursachte Schäden
+              ausgeschlossen, sofern keine wesentlichen Vertragspflichten verletzt werden.
             </p>
           </section>
         </div>
