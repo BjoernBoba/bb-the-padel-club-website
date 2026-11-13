@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       className="relative flex items-center justify-center overflow-hidden"
-      style={{ height: "82svh", minHeight: "600px", background: "var(--black)", paddingBottom: "28vh" }}
+      style={{ height: "91svh", minHeight: "600px", background: "var(--black)", paddingBottom: "28vh" }}
     >
       {/* Großes Logo als Wasserzeichen unterhalb der Buttons */}
       <div
