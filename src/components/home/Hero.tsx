@@ -5,17 +5,25 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden" style={{ height: "100svh", minHeight: "600px" }}>
-      <Image
-        src="/images/hero.webp"
-        alt="BB The Padel Club - Play. Focus. Win. Repeat."
-        fill
-        className="object-cover object-center"
-        priority
-        quality={90}
-      />
-      <div className="absolute inset-0" style={{ background: "rgba(13,13,13,0.5)" }} />
+    <section
+      className="relative flex items-center justify-center overflow-hidden"
+      style={{ height: "100svh", minHeight: "600px", background: "var(--black)" }}
+    >
+      {/* Großes Logo als Wasserzeichen unterhalb der Buttons */}
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{ opacity: 0.07 }}
+      >
+        <Image
+          src="/images/logo.png"
+          alt=""
+          width={380}
+          height={380}
+          className="object-contain"
+        />
+      </div>
 
+      {/* Inhalt */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl">
         <Image
           src="/images/logo.png"
