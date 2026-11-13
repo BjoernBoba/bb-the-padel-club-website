@@ -39,7 +39,7 @@ export default function ImpressumPage() {
               Kontakt
             </h2>
             <p>
-              Telefon: 015125275601<br />
+              Telefon: 0156 3016 9060<br />
               E-Mail: info@bbthepadelclub.de
             </p>
           </section>
