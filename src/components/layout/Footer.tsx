@@ -122,6 +122,7 @@ export default function Footer() {
             </h4>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
               info@bbthepadelclub.de<br />
+              0156 3016 9060<br />
             </p>
           </div>
         </div>
