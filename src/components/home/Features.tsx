@@ -17,7 +17,7 @@ const features = [
       </svg>
     ),
     title: "Professionelles Equipment",
-    text: "Schläger und Bälle für alle Niveaus. Ausleihe und Verkauf vor Ort.",
+    text: ["Schläger-Ausleihe vor Ort", "Bälle zum Kauf erhältlich", "Ballmaschine mietbar"],
   },
   {
     icon: (
