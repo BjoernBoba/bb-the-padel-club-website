@@ -74,7 +74,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="2. Datenerhebung beim Website-Besuch und Hosting">
+          <Section title="2. Datenerhebung beim Website-Besuch">
             <p>
               Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch technische
               Verbindungsdaten in sogenannten Server-Log-Dateien erfasst. Dazu gehören insbesondere
@@ -83,47 +83,10 @@ export default function DatenschutzPage() {
               direkt zuordenbar und dienen ausschließlich dem technisch sicheren Betrieb der Website.
               Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. f DSGVO.
             </p>
-            <p className="mt-3">
-              Diese Website wird bei Vercel Inc., 340 Pine Street Suite 701, San Francisco,
-              CA 94104, USA gehostet. Vercel verarbeitet Verbindungsdaten auf Servern innerhalb der
-              EU und der USA. Eine Datenverarbeitungsvereinbarung nach Art. 28 DSGVO ist abgeschlossen.
-              Weitere Informationen:{" "}
-              <a
-                href="https://vercel.com/legal/privacy-policy"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "var(--gold)" }}
-                className="hover:underline"
-              >
-                vercel.com/legal/privacy-policy
-              </a>
-              .
-            </p>
           </Section>
 
-          <Section title="3. Google Maps">
-            <p>
-              Auf der Anfahrtsseite wird Google Maps eingesetzt (Google Ireland Limited, Gordon House,
-              Barrow Street, Dublin 4, Irland; Google LLC, 1600 Amphitheatre Parkway, Mountain View,
-              CA 94043, USA). Beim Laden der Karte wird die IP-Adresse des Nutzers an Google
-              übermittelt. Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 Buchst. f DSGVO;
-              das berechtigte Interesse besteht in der benutzerfreundlichen Darstellung des Clubstandorts.
-              Weitere Informationen zur Datenverarbeitung durch Google:{" "}
-              <a
-                href="https://policies.google.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "var(--gold)" }}
-                className="hover:underline"
-              >
-                policies.google.com/privacy
-              </a>
-              .
-            </p>
-          </Section>
-
-          <Section title="4. Verarbeitung bei der Online-Buchung">
-            <h3 className="font-semibold mt-4 mb-2" style={{ color: "var(--text)" }}>4.1 Verarbeitete Daten</h3>
+          <Section title="3. Verarbeitung bei der Online-Buchung">
+            <h3 className="font-semibold mt-4 mb-2" style={{ color: "var(--text)" }}>3.1 Verarbeitete Daten</h3>
             <p>Im Rahmen einer Online-Buchung können insbesondere folgende Daten verarbeitet werden:</p>
             <BulletList items={[
               "Vor- und Nachname sowie gegebenenfalls Rechnungsanschrift",
@@ -140,7 +103,7 @@ export default function DatenschutzPage() {
               kann die gewünschte Buchung nicht durchgeführt werden.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>4.2 Zwecke und Rechtsgrundlagen</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>3.2 Zwecke und Rechtsgrundlagen</h3>
             <p>
               Wir verarbeiten die Daten zur Anbahnung, Durchführung und Abrechnung der Buchung sowie
               zur Bereitstellung der gebuchten Leistungen. Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. b DSGVO.
@@ -161,7 +124,7 @@ export default function DatenschutzPage() {
               Werbung ist freiwillig und nicht Voraussetzung für eine Buchung.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>4.3 Angaben über Mitspieler</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>3.3 Angaben über Mitspieler</h3>
             <p>
               Wenn die buchende Person Namen oder Kontaktdaten von Mitspielern angibt, muss sie
               berechtigt sein, uns diese Daten zu übermitteln, und die betreffenden Personen über
@@ -169,7 +132,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="5. Zahlungsabwicklung">
+          <Section title="4. Zahlungsabwicklung">
             <p>
               Zur Zahlungsabwicklung werden die bei der Buchung ausgewiesenen Zahlungsdienstleister
               eingesetzt. Je nach gewählter Zahlungsart werden die erforderlichen Daten unmittelbar
@@ -184,7 +147,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="6. Buchungs-, Hosting- und IT-Dienstleister">
+          <Section title="5. Buchungs-, Hosting- und IT-Dienstleister">
             <p>
               Für den Betrieb des Buchungssystems und der technischen Infrastruktur können
               spezialisierte Buchungs-, Hosting-, E-Mail-, Zahlungs- und IT-Dienstleister eingesetzt
@@ -197,9 +160,47 @@ export default function DatenschutzPage() {
               Pflichten oder zur Geltendmachung beziehungsweise Abwehr von Rechtsansprüchen
               erforderlich ist.
             </p>
+
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>5.1 Hosting (Vercel)</h3>
+            <p>
+              Diese Website wird bei Vercel Inc., 340 Pine Street Suite 701, San Francisco,
+              CA 94104, USA gehostet. Vercel verarbeitet Verbindungsdaten auf Servern innerhalb der
+              EU und der USA. Eine Datenverarbeitungsvereinbarung nach Art. 28 DSGVO ist abgeschlossen.
+              Weitere Informationen:{" "}
+              <a
+                href="https://vercel.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--gold)" }}
+                className="hover:underline"
+              >
+                vercel.com/legal/privacy-policy
+              </a>
+              .
+            </p>
+
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>5.2 Google Maps</h3>
+            <p>
+              Auf der Anfahrtsseite wird Google Maps eingesetzt (Google Ireland Limited, Gordon House,
+              Barrow Street, Dublin 4, Irland; Google LLC, 1600 Amphitheatre Parkway, Mountain View,
+              CA 94043, USA). Beim Laden der Karte wird die IP-Adresse des Nutzers an Google
+              übermittelt. Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 Buchst. f DSGVO;
+              das berechtigte Interesse besteht in der benutzerfreundlichen Darstellung des
+              Clubstandorts. Weitere Informationen:{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--gold)" }}
+                className="hover:underline"
+              >
+                policies.google.com/privacy
+              </a>
+              .
+            </p>
           </Section>
 
-          <Section title="7. Übermittlungen in Drittländer">
+          <Section title="6. Übermittlungen in Drittländer">
             <p>
               Eine Verarbeitung außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums
               findet nur statt, wenn die Voraussetzungen der Art. 44 ff. DSGVO erfüllt sind. Hierzu
@@ -208,7 +209,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="8. Speicherdauer der Buchungsdaten">
+          <Section title="7. Speicherdauer der Buchungsdaten">
             <p>
               Buchungs- und Vertragsdaten werden zunächst für die Durchführung der Buchung gespeichert.
               Anschließend werden sie gelöscht, sobald sie hierfür nicht mehr erforderlich sind und
@@ -223,14 +224,14 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="9. Videoüberwachung im und am Clubgebäude">
+          <Section title="8. Videoüberwachung im und am Clubgebäude">
             <p className="italic mb-4" style={{ color: "var(--text)" }}>
               Wichtige Einordnung: Die Kenntnisnahme dieser Hinweise ist keine Einwilligung in die
               Videoüberwachung. Die Zulässigkeit jeder Kamera wird separat anhand ihres Zwecks,
               ihrer Erforderlichkeit und einer dokumentierten Interessenabwägung beurteilt.
             </p>
 
-            <h3 className="font-semibold mt-4 mb-2" style={{ color: "var(--text)" }}>9.1 Überwachte Bereiche</h3>
+            <h3 className="font-semibold mt-4 mb-2" style={{ color: "var(--text)" }}>8.1 Überwachte Bereiche</h3>
             <p>
               In entsprechend gekennzeichneten Bereichen innerhalb des Clubs und auf den zum Gebäude
               gehörenden Außenflächen werden Videokameras eingesetzt. Hierzu können insbesondere
@@ -250,7 +251,7 @@ export default function DatenschutzPage() {
               Verhaltensanalyse und automatisierte Profilbildung werden nicht eingesetzt.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>9.2 Zwecke der Videoüberwachung</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>8.2 Zwecke der Videoüberwachung</h3>
             <p>Die Videoüberwachung erfolgt — abhängig vom jeweils überwachten Bereich — zu folgenden Zwecken:</p>
             <BulletList items={[
               "Schutz des Gebäudes und des Eigentums vor konkret festgestellten Einbrüchen, Diebstählen und Sachbeschädigungen",
@@ -263,7 +264,7 @@ export default function DatenschutzPage() {
               Beschäftigten, Mitgliedern, Spielern oder Gästen findet nicht statt.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>9.3 Rechtsgrundlage und berechtigte Interessen</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>8.3 Rechtsgrundlage und berechtigte Interessen</h3>
             <p>
               Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. f DSGVO. Die berechtigten Interessen bestehen
               im Schutz von Personen, Gebäude, Betriebsmitteln und Eigentum, in der Aufklärung
@@ -281,7 +282,7 @@ export default function DatenschutzPage() {
               Videoüberwachung dar.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>9.4 Aufzeichnungsdauer und Löschung</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>8.4 Aufzeichnungsdauer und Löschung</h3>
             <p>
               Die Aufnahmen werden grundsätzlich spätestens nach 72 Stunden automatisch gelöscht
               oder überschrieben. Wird innerhalb dieser Frist ein konkreter Vorfall festgestellt,
@@ -295,7 +296,7 @@ export default function DatenschutzPage() {
               dokumentiert ist.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>9.5 Zugriff und Empfänger</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>8.5 Zugriff und Empfänger</h3>
             <p>
               Zugriff auf die Aufnahmen haben ausschließlich ausdrücklich berechtigte Personen der
               BB Court Sports GmbH sowie gegebenenfalls vertraglich gebundene Sicherheits- oder
@@ -307,7 +308,7 @@ export default function DatenschutzPage() {
               zulässig und für die Aufklärung oder Rechtsverfolgung erforderlich ist.
             </p>
 
-            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>9.6 Hinweise vor Ort</h3>
+            <h3 className="font-semibold mt-6 mb-2" style={{ color: "var(--text)" }}>8.6 Hinweise vor Ort</h3>
             <p>
               Vor dem Betreten eines überwachten Bereichs wird durch gut sichtbare Hinweisschilder
               über die Videoüberwachung informiert. Dort werden mindestens der Verantwortliche, die
@@ -316,7 +317,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="10. Cookies und vergleichbare Technologien">
+          <Section title="9. Cookies und vergleichbare Technologien">
             <p>
               Technisch erforderliche Cookies und Speichertechnologien werden eingesetzt, soweit sie
               für den Betrieb und die Sicherheit des Buchungssystems erforderlich sind. Nicht
@@ -326,7 +327,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="11. Rechte betroffener Personen">
+          <Section title="10. Rechte betroffener Personen">
             <p>Betroffene Personen haben nach Maßgabe der gesetzlichen Voraussetzungen insbesondere das Recht auf:</p>
             <BulletList items={[
               "Auskunft nach Art. 15 DSGVO",
@@ -353,7 +354,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="12. Beschwerderecht">
+          <Section title="11. Beschwerderecht">
             <p>
               Betroffene Personen können sich bei einer Datenschutzaufsichtsbehörde beschweren.
               Für die BB Court Sports GmbH ist grundsätzlich zuständig:
@@ -374,7 +375,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="13. Änderung dieser Datenschutzhinweise">
+          <Section title="12. Änderung dieser Datenschutzhinweise">
             <p>
               Diese Datenschutzhinweise können angepasst werden, wenn sich eingesetzte Verfahren,
               Dienstleister oder gesetzliche Anforderungen ändern. Für die jeweilige Buchung wird
