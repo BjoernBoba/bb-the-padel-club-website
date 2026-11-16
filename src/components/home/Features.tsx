@@ -28,7 +28,7 @@ const features = [
       </svg>
     ),
     title: "Community & Events",
-    text: "Regelmäßige Workshops und Events für alle Spielstärken.",
+    text: "Regelmäßige Events für alle Spielstärken.",
   },
   {
     icon: (
@@ -47,12 +47,18 @@ export default function Features() {
   return (
     <section className="py-20 px-6" style={{ background: "var(--surface)" }}>
       <div className="max-w-6xl mx-auto">
-        <h2
-          className="text-3xl text-center mb-12"
-          style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}
-        >
-          Was uns auszeichnet
-        </h2>
+        <div className="flex flex-col items-center mb-12 gap-3">
+          <p className="text-sm tracking-[0.3em] uppercase" style={{ color: "var(--gold)" }}>
+            — The Padel Club —
+          </p>
+          <h2
+            className="text-4xl text-center"
+            style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}
+          >
+            Das erwartet Dich
+          </h2>
+          <div className="w-12 h-px mt-1" style={{ background: "var(--gold)" }} />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <div

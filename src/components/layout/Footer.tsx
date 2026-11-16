@@ -136,7 +136,6 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--border)", color: "var(--text-muted)" }}
         >
           <span>© {year} BB The Padel Club. Alle Rechte vorbehalten.</span>
-          <span>Built with ❤ für den Sport.</span>
         </div>
       </div>
     </footer>
