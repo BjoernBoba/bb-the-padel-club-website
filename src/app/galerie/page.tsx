@@ -6,6 +6,8 @@ export const metadata = {
   title: "Galerie | BB The Padel Club",
 };
 
+export const dynamic = "force-dynamic";
+
 async function getGalleryItems() {
   return client.fetch(
     `*[_type == "galleryItem"] | order(order asc) {
