@@ -1,22 +1,39 @@
-"use client";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import GalleryClient from "@/components/gallery/GalleryClient";
 
-import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import Image from "next/image";
-import { galleryImages } from "@/lib/gallery";
+export const metadata = {
+  title: "Galerie | BB The Padel Club",
+};
 
-const videos = [
-  { id: "placeholder1", title: "Highlights Turnier 2024" },
-  { id: "placeholder2", title: "Court-Einführung & Regelkunde" },
-];
+async function getGalleryItems() {
+  return client.fetch(
+    `*[_type == "galleryItem"] | order(order asc) {
+      _id,
+      mediaType,
+      image,
+      "videoUrl": video.asset->url,
+      caption
+    }`
+  );
+}
 
-export default function GaleriePage() {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [loaded, setLoaded] = useState<Record<number, boolean>>({});
+export default async function GaleriePage() {
+  const raw = await getGalleryItems();
 
-  const slides = galleryImages.map((img) => ({ src: img.src }));
+  const items = raw.map((item: {
+    _id: string;
+    mediaType: "photo" | "video";
+    image?: object;
+    videoUrl?: string;
+    caption?: string;
+  }) => ({
+    _id: item._id,
+    mediaType: item.mediaType,
+    imageUrl: item.image ? urlFor(item.image).width(1200).quality(85).url() : undefined,
+    videoUrl: item.videoUrl,
+    caption: item.caption,
+  }));
 
   return (
     <div className="min-h-screen py-20 px-6" style={{ background: "var(--black)" }}>
@@ -33,70 +50,13 @@ export default function GaleriePage() {
           </h1>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 mb-16">
-          {galleryImages.map((img, i) => (
-            <div
-              key={i}
-              className="mb-4 overflow-hidden cursor-pointer group break-inside-avoid relative"
-              onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}
-            >
-              {!loaded[i] && (
-                <div
-                  className="absolute inset-0 animate-pulse"
-                  style={{ background: "var(--surface)", aspectRatio: "4/3" }}
-                />
-              )}
-              <Image
-                src={img.src}
-                alt={img.alt}
-                width={800}
-                height={800}
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                onLoad={() => setLoaded((prev) => ({ ...prev, [i]: true }))}
-              />
-            </div>
-          ))}
-        </div>
-
-        <Lightbox
-          open={lightboxOpen}
-          close={() => setLightboxOpen(false)}
-          slides={slides}
-          index={lightboxIndex}
-        />
-
-        <div>
-          <h2
-            className="text-3xl font-bold mb-8"
-            style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}
-          >
-            Videos
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {videos.map((v, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center justify-center gap-4 p-8"
-                style={{ background: "var(--surface)", aspectRatio: "16/9", border: "1px solid var(--border)" }}
-              >
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center"
-                  style={{ background: "var(--gold)", opacity: 0.7 }}
-                >
-                  <svg viewBox="0 0 24 24" fill="var(--black)" className="w-8 h-8 ml-1">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-sm text-center" style={{ color: "var(--text-muted)" }}>
-                  {v.title}
-                </p>
-                <p className="text-xs tracking-widest uppercase" style={{ color: "var(--text-muted)", opacity: 0.6 }}>
-                  Video folgt demnächst
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {items.length === 0 ? (
+          <p className="text-center py-20" style={{ color: "var(--text-muted)" }}>
+            Noch keine Inhalte vorhanden.
+          </p>
+        ) : (
+          <GalleryClient items={items} />
+        )}
       </div>
     </div>
   );

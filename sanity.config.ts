@@ -6,7 +6,7 @@ import { schemaTypes } from "./src/sanity/schemaTypes";
 export default defineConfig({
   name: "bb-padel-club",
   title: "BB The Padel Club",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "placeholder",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "262w5wmh",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production",
   plugins: [structureTool(), visionTool()],
   schema: {
