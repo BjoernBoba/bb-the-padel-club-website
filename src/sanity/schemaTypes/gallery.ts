@@ -39,6 +39,13 @@ export const gallerySchema = defineType({
       type: "string",
     }),
     defineField({
+      name: "showOnHomepage",
+      title: "Auf Startseite anzeigen",
+      type: "boolean",
+      initialValue: false,
+      description: "Dieses Bild im Galerie-Teaser auf der Startseite anzeigen",
+    }),
+    defineField({
       name: "order",
       title: "Reihenfolge",
       type: "number",

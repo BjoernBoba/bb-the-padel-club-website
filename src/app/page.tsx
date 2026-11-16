@@ -74,7 +74,20 @@ export default function HomePage() {
       }>
         <NewsSectionAsync />
       </Suspense>
-      <GalerieTeaser />
+      <Suspense fallback={
+        <section className="py-20 px-6" style={{ background: "var(--surface)" }}>
+          <div className="max-w-6xl mx-auto">
+            <div className="h-8 w-24 rounded mb-8 animate-pulse" style={{ background: "var(--border)" }} />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="animate-pulse" style={{ aspectRatio: "3/4", background: "var(--border)" }} />
+              ))}
+            </div>
+          </div>
+        </section>
+      }>
+        <GalerieTeaser />
+      </Suspense>
       <BookingCTA />
     </>
   );

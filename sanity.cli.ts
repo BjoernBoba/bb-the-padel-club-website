@@ -5,4 +5,8 @@ export default defineCliConfig({
     projectId: "262w5wmh",
     dataset: "production",
   },
+  studioHost: "bb-padel-club",
+  deployment: {
+    appId: "hsim119c1pmqu77nqkmnkfuu",
+  },
 });
