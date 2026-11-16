@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  serverExternalPackages: ["sanity", "@sanity/vision", "next-sanity", "swr"],
+  serverExternalPackages: ["sanity", "next-sanity"],
   images: {
     qualities: [75, 90],
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
