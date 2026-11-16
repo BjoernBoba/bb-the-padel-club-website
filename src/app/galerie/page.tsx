@@ -16,9 +16,7 @@ async function getGalleryItems() {
       image,
       "videoUrl": video.asset->url,
       caption
-    }`,
-    {},
-    { cache: "no-store" }
+    }`
   );
 }
 
