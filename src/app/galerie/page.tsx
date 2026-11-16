@@ -25,6 +25,8 @@ async function getGalleryItems() {
 export default async function GaleriePage() {
   const raw = await getGalleryItems();
 
+  console.log("[galerie] raw count:", raw.length, JSON.stringify(raw.slice(0, 1)));
+
   const items = raw.map((item: {
     _id: string;
     mediaType: "photo" | "video";
