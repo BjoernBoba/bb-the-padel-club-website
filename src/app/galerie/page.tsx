@@ -25,9 +25,6 @@ async function getGalleryItems() {
 export default async function GaleriePage() {
   const raw = await getGalleryItems();
 
-  console.log("[galerie] raw count:", raw.length, JSON.stringify(raw.slice(0, 1)));
-  console.log("[galerie] projectId:", process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, "dataset:", process.env.NEXT_PUBLIC_SANITY_DATASET);
-
   const items = raw.map((item: {
     _id: string;
     mediaType: "photo" | "video";
