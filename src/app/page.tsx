@@ -8,8 +8,6 @@ import BookingCTA from "@/components/home/BookingCTA";
 import { client } from "@/sanity/lib/client";
 import { newsPreviewQuery } from "@/lib/queries";
 
-export const revalidate = 60;
-
 const DEMO_NEWS: NewsPreviewItem[] = [
   {
     _id: "demo-0",
