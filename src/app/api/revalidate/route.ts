@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
   }
 
   revalidatePath("/galerie");
+  revalidatePath("/");
 
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
