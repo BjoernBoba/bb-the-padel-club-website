@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/galerie", label: "Galerie" },
   { href: "/anfahrt", label: "Anfahrt" },
   { href: "/preise", label: "Preise" },
+  { href: "/turniere", label: "Events" },
 ];
 
 export default function Header() {

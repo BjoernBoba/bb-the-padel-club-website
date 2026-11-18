@@ -1,4 +1,4 @@
-import Script from "next/script";
+import TurnierProWidget from "@/components/TurnierProWidget";
 
 export const metadata = {
   title: "Turniere | BB The Padel Club",
@@ -11,7 +11,7 @@ export default function TurnierePage() {
       <div className="max-w-5xl mx-auto px-4 py-24">
         <div className="mb-12">
           <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "var(--gold)" }}>
-            — Wettbewerb —
+            — Events & Turniere —
           </p>
           <h1
             className="text-5xl font-bold"
@@ -21,8 +21,7 @@ export default function TurnierePage() {
           </h1>
         </div>
 
-        <div className="turnierpro" data-turnier="t8479rriyx" data-ansicht="komplett" data-design="hell" data-farbe="#1DC98A" />
-        <Script src="https://turnier-pro.de/widget.js" strategy="afterInteractive" />
+        <TurnierProWidget />
       </div>
     </div>
   );
