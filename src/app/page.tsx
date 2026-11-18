@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Script from "next/script";
 import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
 import CommunitySection from "@/components/home/CommunitySection";
@@ -88,6 +89,20 @@ export default function HomePage() {
       }>
         <GalerieTeaser />
       </Suspense>
+      <section className="py-20 px-6" style={{ background: "var(--black)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "var(--gold)" }}>
+              — Wettbewerb —
+            </p>
+            <h2 className="text-3xl" style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}>
+              Turniere
+            </h2>
+          </div>
+          <div className="turnierpro" data-turnier="t8479rriyx" data-ansicht="komplett" data-design="hell" data-farbe="#1DC98A" />
+          <Script src="https://turnier-pro.de/widget.js" strategy="afterInteractive" />
+        </div>
+      </section>
       <BookingCTA />
     </>
   );
