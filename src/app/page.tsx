@@ -8,44 +8,13 @@ import BookingCTA from "@/components/home/BookingCTA";
 import { client } from "@/sanity/lib/client";
 import { newsPreviewQuery } from "@/lib/queries";
 
-const DEMO_NEWS: NewsPreviewItem[] = [
-  {
-    _id: "demo-0",
-    title: "Neueröffnung am 12. Dezember 2026 — Seid dabei!",
-    slug: { current: "neuroeffnung-dezember-2026" },
-    publishedAt: "2026-11-12T10:00:00Z",
-    category: "Events",
-    excerpt: "Am 12. Dezember 2026 öffnet BB The Padel Club offiziell seine Türen. Eintritt frei!",
-    image: { asset: { url: "/images/hero.webp" } },
-  },
-  {
-    _id: "demo-1",
-    title: "Erstes Club-Turnier: Anmeldung ab sofort offen",
-    slug: { current: "erstes-club-turnier" },
-    publishedAt: "2026-02-01T10:00:00Z",
-    category: "Turniere",
-    excerpt: "Am 15. März 2026 findet das erste offizielle Clubturnier statt.",
-    image: { asset: { url: "/images/better-players.webp" } },
-  },
-  {
-    _id: "demo-2",
-    title: "Neue Öffnungszeiten & erweitertes Kursangebot ab März",
-    slug: { current: "neue-oeffnungszeiten-maerz" },
-    publishedAt: "2026-01-20T09:00:00Z",
-    category: "News",
-    excerpt: "Ab sofort täglich von 08:00 bis 23:00 Uhr — plus neue Anfänger- und Fortgeschrittenenkurse.",
-    image: { asset: { url: "/images/vertical.webp" } },
-  },
-];
-
 async function NewsSectionAsync() {
   let news: NewsPreviewItem[] = [];
   try {
     news = await client.fetch(newsPreviewQuery);
   } catch {
-    // Sanity noch nicht konfiguriert oder nicht erreichbar
+    // Sanity nicht erreichbar
   }
-  if (news.length === 0) news = DEMO_NEWS;
   return <NewsPreview news={news} />;
 }
 

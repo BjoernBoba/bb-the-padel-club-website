@@ -26,48 +26,13 @@ function NewsGrid({ news }: { news: NewsPreviewItem[] }) {
   );
 }
 
-const DEMO_NEWS: NewsPreviewItem[] = [
-  {
-    _id: "demo-0",
-    title: "Neueröffnung am 12. Dezember 2026 — Seid dabei!",
-    slug: { current: "neuroeffnung-dezember-2026" },
-    publishedAt: "2026-11-12T10:00:00Z",
-    category: "Events",
-    excerpt:
-      "Es ist so weit: Am 12. Dezember 2026 öffnet BB The Padel Club offiziell seine Türen. Feiert mit uns den Start — mit Live-Musik, Snacks, Getränken und natürlich jeder Menge Padel. Der Eintritt ist frei!",
-    image: { asset: { url: "/images/hero.webp" } },
-  },
-  {
-    _id: "demo-1",
-    title: "Erstes Club-Turnier: Anmeldung ab sofort offen",
-    slug: { current: "erstes-club-turnier" },
-    publishedAt: "2026-02-01T10:00:00Z",
-    category: "Turniere",
-    excerpt:
-      "Am 15. März 2026 findet das erste offizielle Clubturnier statt. Alle Mitglieder sind herzlich eingeladen — Paare und Mixed-Teams willkommen. Begrenzte Plätze, jetzt anmelden!",
-    image: { asset: { url: "/images/better-players.webp" } },
-  },
-  {
-    _id: "demo-2",
-    title: "Neue Öffnungszeiten & erweitertes Kursangebot ab März",
-    slug: { current: "neue-oeffnungszeiten-maerz" },
-    publishedAt: "2026-01-20T09:00:00Z",
-    category: "News",
-    excerpt:
-      "Ab sofort täglich von 08:00 bis 23:00 Uhr für euch da. Zusätzlich starten wir mit wöchentlichen Anfänger- und Fortgeschrittenenkursen — jetzt vormerken lassen!",
-    image: { asset: { url: "/images/vertical.webp" } },
-  },
-];
-
 async function NewsListAsync() {
   let news: NewsPreviewItem[] = [];
   try {
     news = await client.fetch(newsListQuery);
   } catch {
-    // Sanity noch nicht konfiguriert
+    // Sanity nicht erreichbar
   }
-  // Demo-Daten anzeigen solange Sanity noch keine echten Artikel liefert
-  if (news.length === 0) news = DEMO_NEWS;
   return <NewsGrid news={news} />;
 }
 
