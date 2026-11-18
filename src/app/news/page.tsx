@@ -52,7 +52,7 @@ const DEMO_NEWS: NewsPreviewItem[] = [
     publishedAt: "2026-01-20T09:00:00Z",
     category: "News",
     excerpt:
-      "Ab März 2026 sind wir täglich von 07:00 bis 23:00 Uhr für euch da. Zusätzlich starten wir mit wöchentlichen Anfänger- und Fortgeschrittenenkursen — jetzt vormerken lassen!",
+      "Ab sofort täglich von 08:00 bis 23:00 Uhr für euch da. Zusätzlich starten wir mit wöchentlichen Anfänger- und Fortgeschrittenenkursen — jetzt vormerken lassen!",
     image: { asset: { url: "/images/vertical.webp" } },
   },
 ];

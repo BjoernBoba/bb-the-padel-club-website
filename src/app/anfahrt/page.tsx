@@ -46,10 +46,7 @@ export default function AnfahrtPage() {
               <table className="w-full text-sm" style={{ color: "var(--text-muted)" }}>
                 <tbody>
                   {[
-                    ["Montag – Freitag", "08:00 – 22:00 Uhr"],
-                    ["Samstag", "08:00 – 20:00 Uhr"],
-                    ["Sonntag", "08:00 – 20:00 Uhr"],
-                    ["Feiertage", "10:00 – 18:00 Uhr"],
+                    ["Täglich", "08:00 – 23:00 Uhr"],
                   ].map(([day, hours]) => (
                     <tr key={day} className="border-b" style={{ borderColor: "var(--border)" }}>
                       <td className="py-2 pr-4">{day}</td>

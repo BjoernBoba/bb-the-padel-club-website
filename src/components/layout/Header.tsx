@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/news", label: "News" },
   { href: "/galerie", label: "Galerie" },
   { href: "/anfahrt", label: "Anfahrt" },
+  { href: "/preise", label: "Preise" },
 ];
 
 export default function Header() {

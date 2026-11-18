@@ -33,7 +33,7 @@ const DEMO_NEWS: NewsPreviewItem[] = [
     slug: { current: "neue-oeffnungszeiten-maerz" },
     publishedAt: "2026-01-20T09:00:00Z",
     category: "News",
-    excerpt: "Ab März täglich von 07:00 bis 23:00 Uhr — plus neue Anfänger- und Fortgeschrittenenkurse.",
+    excerpt: "Ab sofort täglich von 08:00 bis 23:00 Uhr — plus neue Anfänger- und Fortgeschrittenenkurse.",
     image: { asset: { url: "/images/vertical.webp" } },
   },
 ];
