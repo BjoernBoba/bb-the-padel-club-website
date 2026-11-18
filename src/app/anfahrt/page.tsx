@@ -66,6 +66,15 @@ export default function AnfahrtPage() {
               </p>
             </div>
 
+            <div className="mb-8">
+              <h3 className="text-xs tracking-widest uppercase mb-3" style={{ color: "var(--gold)" }}>
+                Parken
+              </h3>
+              <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+                Kostenfreie Parkplätze stehen direkt vor der Anlage zur Verfügung.
+              </p>
+            </div>
+
             <a
               href="https://www.google.com/maps/search/?api=1&query=Schachenstrasse+112,+66954+Pirmasens"
               target="_blank"
@@ -78,31 +87,6 @@ export default function AnfahrtPage() {
           </div>
 
           <GoogleMap />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6" style={{ background: "var(--surface)", borderTop: "2px solid var(--gold)" }}>
-            <h3
-              className="text-lg font-bold mb-4"
-              style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}
-            >
-              🚗 Parken
-            </h3>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Kostenfreie Parkplätze stehen direkt vor der Anlage zur Verfügung.
-            </p>
-          </div>
-          <div className="p-6" style={{ background: "var(--surface)", borderTop: "2px solid var(--gold)" }}>
-            <h3
-              className="text-lg font-bold mb-4"
-              style={{ color: "var(--text)", fontFamily: "var(--font-playfair)" }}
-            >
-              🚌 Öffentliche Verkehrsmittel
-            </h3>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-              Haltestelle in der Nähe der Schachenstrasse. Weitere Infos beim VRN.
-            </p>
-          </div>
         </div>
       </div>
     </div>
