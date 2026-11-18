@@ -4,6 +4,8 @@ import { newsListQuery } from "@/lib/queries";
 import { NewsPreviewItem } from "@/components/home/NewsPreview";
 import NewsCard from "@/components/news/NewsCard";
 
+export const dynamic = "force-dynamic";
+
 function NewsGrid({ news }: { news: NewsPreviewItem[] }) {
   return (
     <>

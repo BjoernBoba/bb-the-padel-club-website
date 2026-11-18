@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import { client } from "@/sanity/lib/client";
 import { newsBySlugQuery } from "@/lib/queries";
 import Image from "next/image";
+
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PortableTextRenderer from "@/components/news/PortableText";
