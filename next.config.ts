@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/buchen",
-        destination: "https://benberger-padel.ebusy.de/",
+        destination: "https://bbthepadelclub.ebusy.de/",
         permanent: false,
       },
     ];

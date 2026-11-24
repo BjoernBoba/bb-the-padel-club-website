@@ -53,3 +53,27 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-playfair), Georgia, serif;
 }
+
+/* FAQ details/summary styling */
+.faq-item > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item > summary::after {
+  content: "+";
+  color: var(--gold-dark);
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.faq-item[open] > summary::after {
+  content: "−";
+}

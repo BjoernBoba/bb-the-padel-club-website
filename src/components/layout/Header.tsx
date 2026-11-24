@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/anfahrt", label: "Anfahrt" },
   { href: "/preise", label: "Preise" },
   { href: "/turniere", label: "Events" },
+  { href: "/regeln", label: "Regeln" },
 ];
 
 export default function Header() {

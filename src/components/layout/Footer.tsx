@@ -64,6 +64,9 @@ export default function Footer() {
                 { href: "/news", label: "News" },
                 { href: "/galerie", label: "Galerie" },
                 { href: "/anfahrt", label: "Anfahrt" },
+                { href: "/preise", label: "Preise" },
+                { href: "/turniere", label: "Events" },
+                { href: "/regeln", label: "Regeln" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
